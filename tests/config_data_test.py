@@ -12,6 +12,15 @@ stations = [
         "platform": "Platform 83",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/188141ec-d65a-464d-be96-4b6d00343c49",
         "webhook_2": "https://open.feishu.cn/open-apis/bot/v2/hook/188141ec-d65a-464d-be96-4b6d00343c49"
+    },
+
+    {
+        "id": 768, 
+        "name": "WER", 
+        "pickup_time": "20:30", 
+        "platform": "Platform 79",
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/188141ec-d65a-464d-be96-4b6d00343c49",
+        "webhook_2": "https://open.feishu.cn/open-apis/bot/v2/hook/188141ec-d65a-464d-be96-4b6d00343c49"
     }
 ]
 
