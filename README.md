@@ -31,7 +31,8 @@
 2. 进入项目目录：
    cd path/to/my_project
 3. 安装依赖：
-   pip install -r requirements.txt
+```bash
+pip install -r requirements.txt
 
 ### Chrome 浏览器与驱动
 
