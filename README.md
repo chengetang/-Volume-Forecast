@@ -36,7 +36,7 @@ pip install -r requirements.txt
 ```
 ### Chrome 浏览器与驱动
 
-- 确保本地安装了 Chrome 浏览器。
+确保本地安装了 Chrome 浏览器。
 
 ### 运行启动器文件
 
