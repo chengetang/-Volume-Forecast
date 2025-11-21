@@ -19,42 +19,43 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 print("库导入成功")
 
+# =======================================================
+# ==                   导入配置文件                      ==
+# =======================================================
+
 # 统一的脚本目录/配置文件路径
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 CONFIG_FILE_NAME = "config_data_test.py"
 CONFIG_FILE_PATH = os.path.join(SCRIPT_DIR, CONFIG_FILE_NAME)   
 
-def load_config():
-    """重新加载配置"""
-    print("\n" + "="*50)
-    print("           系统初始化")
-    print("="*50)
+"""重新加载配置"""
+print("\n" + "="*50)
+print("           系统初始化")
+print("="*50)
+
+try:
+    modules_to_clear = ['config_data_test']
+    for module in modules_to_clear:
+        if module in sys.modules:
+            del sys.modules[module]
+            print(f"🗑️  已清除模块: {module}")
     
-    try:
-        modules_to_clear = ['config_data_test']
-        for module in modules_to_clear:
-            if module in sys.modules:
-                del sys.modules[module]
-                print(f"🗑️  已清除模块: {module}")
-        
-        if SCRIPT_DIR not in sys.path:
-            sys.path.insert(0, SCRIPT_DIR)
-        
-        global stations, API_CONFIG, QUERY_CONFIG, HEADERS_CONFIG
-        global TOKEN_CONFIG, FEISHU_CONFIG, OUTPUT_CONFIG, SYSTEM_CONFIG
-        
-        from config_data_test import (
-            stations, API_CONFIG, QUERY_CONFIG, HEADERS_CONFIG,
-            TOKEN_CONFIG, FEISHU_CONFIG, OUTPUT_CONFIG, SYSTEM_CONFIG
-        )
-        print("✅ 配置文件加载成功")
-        print(f"📊 加载的站点数量: {len(stations)}")
-        for station in stations[:3]:
-            print(f"   - {station['name']} (ID: {station['id']})")
-        return True
-    except ImportError as e:
-        print(f"❌ 配置文件加载失败: {e}")
-        return False
+    if SCRIPT_DIR not in sys.path:
+        sys.path.insert(0, SCRIPT_DIR)
+    
+    global stations, API_CONFIG, QUERY_CONFIG, HEADERS_CONFIG
+    global TOKEN_CONFIG, FEISHU_CONFIG, OUTPUT_CONFIG, SYSTEM_CONFIG
+    
+    from config_data_test import (
+        stations, API_CONFIG, QUERY_CONFIG, HEADERS_CONFIG,
+        TOKEN_CONFIG, FEISHU_CONFIG, OUTPUT_CONFIG, SYSTEM_CONFIG
+    )
+    print("✅ 配置文件加载成功")
+    print(f"📊 加载的站点数量: {len(stations)}")
+    for station in stations[:3]:
+        print(f"   - {station['name']} (ID: {station['id']})")
+except ImportError as e:
+    print(f"❌ 配置文件加载失败: {e}")
 
 # =======================================================
 # ==              账号密码本地存储 & 获取                 ==
