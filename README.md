@@ -1,4 +1,4 @@
-# Volume-Forecast（货量预测工具）
+# Volume-Forecast
 
 一个用于发布预测货量的 Python 工具。
 
