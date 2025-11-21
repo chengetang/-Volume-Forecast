@@ -33,7 +33,7 @@
 3. 安装依赖：
 ```bash
 pip install -r requirements.txt
-
+```
 ### Chrome 浏览器与驱动
 
 - 确保本地安装了 Chrome 浏览器。
