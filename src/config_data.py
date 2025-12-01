@@ -156,7 +156,7 @@ stations = [
     {
         "id": 1339,
         "name": "TSI",
-        "pickup_time": "20:30",
+        "pickup_time": "19:00",
         "platform": "Platform 27",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/a4841ae0-5e7b-46fc-a8a5-357fe5c50630"
     },
@@ -397,7 +397,7 @@ stations = [
         "id": 1389,
         "name": "PMS",
         "pickup_time": "21:00",
-        "platform": "Platform ***",
+        "platform": "Platform A02",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/31bdf103-7ec9-4429-a27a-c709fef64c05"
     },
     {
