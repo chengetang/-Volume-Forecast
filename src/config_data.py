@@ -399,7 +399,28 @@ stations = [
         "pickup_time": "21:00",
         "platform": "Platform ***",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/31bdf103-7ec9-4429-a27a-c709fef64c05"
-    }
+    },
+    {
+        "id": 1390,
+        "name": "37A",
+        "pickup_time": "21:00",
+        "platform": "Platform ***",
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/5fc3dd02-e166-4514-bd99-1f41c5ddc588"     
+    },
+    {
+        "id": 1391,
+        "name": "JUM",
+        "pickup_time": "21:00",
+        "platform": "Platform ***",
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/23e6507f-1f4d-448b-8631-bad6776716c1"     
+    },
+    {
+        "id": 1413,
+        "name": "T4U",
+        "pickup_time": "20:00",
+        "platform": "Platform 31",
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/5ff782cd-a708-4cee-af64-5f963fea4f53"     
+    },
 ]
 
 # ==================== API 配置 ====================
