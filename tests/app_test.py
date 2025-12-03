@@ -368,8 +368,7 @@ if 'auth_token' in locals() and auth_token:
         }
         
         try:
-            response = s.post(api_url, headers=headers, data=json.dumps(payload), 
-                            verify=False, timeout=API_CONFIG['timeout'])
+            response = requests.post(api_url, headers=headers, json=payload, timeout=API_CONFIG['timeout'])
             
             if response.status_code == 200:
                 response_json = response.json()
@@ -432,8 +431,7 @@ if 'auth_token' in locals() and auth_token:
         }
         
         try:
-            response = s.post(api_url, headers=headers, data=json.dumps(payload), 
-                            verify=False, timeout=API_CONFIG['timeout'])
+            response = requests.post(api_url, headers=headers, json=payload, timeout=API_CONFIG['timeout'])
             
             if response.status_code == 200:
                 response_json = response.json()
