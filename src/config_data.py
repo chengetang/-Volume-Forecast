@@ -60,8 +60,8 @@ stations = [
         "name": "INB",
         "pickup_time": "19:00",
         "platform": "Platform 84",
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/188141ec-d65a-464d-be96-4b6d00343c49"
-        # "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/8f132424-c7fd-4fd5-a16a-425f83b083d5"
+        # "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/188141ec-d65a-464d-be96-4b6d00343c49" # 测试
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/9eb00e37-5c08-4b3e-a8d9-d41adc21ae25"
     },
 
     {
@@ -218,8 +218,8 @@ stations = [
         "name": "B88",
         "pickup_time": "21:00",
         "platform": "Platform 5",
-        # "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/b546eda9-6e98-49ec-9414-85e49b00b0f0"
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/188141ec-d65a-464d-be96-4b6d00343c49"
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/a605f6fa-1eff-419a-8e4b-0f954bad96e4"
+        # "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/188141ec-d65a-464d-be96-4b6d00343c49" #测试
     },
     
     {
