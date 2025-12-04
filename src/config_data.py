@@ -335,13 +335,6 @@ stations = [
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/dc4561ce-9d55-4fbc-8c17-f147263ebb4d"
     },
     {
-        "id": 1382,
-        "name": "TNZ",
-        "pickup_time": "21:00",
-        "platform": "Platform ***",
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/8a7a6f3a-bf7a-43dc-92e9-d646291de8d0"
-    },
-    {
         "id": 1381,
         "name": "POK",
         "pickup_time": "21:00",
@@ -390,13 +383,13 @@ stations = [
     #     "platform": "Platform 88",
     #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/a5cf4557-53d1-45d4-a57e-d65673a24d54"
     # },
-    {
-        "id": 1388,
-        "name": "MAN",
-        "pickup_time": "21:00",
-        "platform": "Platform ***",
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/ede70a5a-1baf-4f24-ad1e-417551df3a62"
-    },
+    # {
+    #     "id": 1388,
+    #     "name": "MAN",
+    #     "pickup_time": "21:00",
+    #     "platform": "Platform ***",
+    #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/ede70a5a-1baf-4f24-ad1e-417551df3a62"
+    # },
     {
         "id": 1389,
         "name": "PMS",
