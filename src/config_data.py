@@ -193,8 +193,8 @@ stations = [
     {
         "id": 1346,
         "name": "BMB",
-        "pickup_time": "19:45",
-        "platform": "Platform 28",
+        "pickup_time": "20:00",
+        "platform": "Platform 91",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/51abaae6-88c7-4fc5-bddc-92c5c010344a"
     },
     {
@@ -352,7 +352,7 @@ stations = [
         "id": 1376,
         "name": "BMW",
         "pickup_time": "20:00",
-        "platform": "Platform 28",
+        "platform": "Platform 90",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/47e0010c-e016-4c61-9cc5-66919a2649de"
     },
     {
@@ -417,6 +417,13 @@ stations = [
         "pickup_time": "20:00",
         "platform": "Platform 31",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/5ff782cd-a708-4cee-af64-5f963fea4f53"     
+    },
+    {
+        "id": 1418,
+        "name": "PRE",
+        "pickup_time": "19:00",
+        "platform": "Platform 25",
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/8b63688f-d402-445a-9a1d-4d2ccc6b57d0"     
     },
 ]
 
