@@ -424,7 +424,7 @@ stations = [
         "pickup_time": "19:00",
         "platform": "Platform 25",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/8b63688f-d402-445a-9a1d-4d2ccc6b57d0"     
-    },
+    }
 ]
 
 # ==================== API 配置 ====================
