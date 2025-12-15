@@ -424,6 +424,20 @@ stations = [
         "pickup_time": "19:00",
         "platform": "Platform 25",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/8b63688f-d402-445a-9a1d-4d2ccc6b57d0"     
+    },
+    {
+        "id": 1420,
+        "name": "AWK",
+        "pickup_time": "19:00",
+        "platform": "Platform 34",
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/23c1511d-e854-4aff-b9c0-ab8bae58835b"     
+    },
+    {
+        "id": 1414,
+        "name": "RAR",
+        "pickup_time": "21:00",
+        "platform": "Platform 15",
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/c6a47d13-72cb-4edc-96ef-4862a99f7895"     
     }
 ]
 
