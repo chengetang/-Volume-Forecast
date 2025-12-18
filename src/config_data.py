@@ -438,6 +438,13 @@ stations = [
         "pickup_time": "21:00",
         "platform": "Platform 15",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/c6a47d13-72cb-4edc-96ef-4862a99f7895"     
+    },
+    {
+        "id": 1424,
+        "name": "9HI",
+        "pickup_time": "21:00 - 21:30",
+        "platform": "Platform ***",
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/f19f4b88-b9eb-4fdf-bef5-35133f9d85cf"     
     }
 ]
 
