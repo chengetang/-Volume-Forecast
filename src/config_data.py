@@ -46,13 +46,13 @@ stations = [
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/1be920d5-3e51-4495-a6ee-46e0cafd8c94"
     },
 
-    # {
-    #     "id": 899,
-    #     "name": "JHD",
-    #     "pickup_time": "20:00",
-    #     "platform": "Platform 34",
-    #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/78499cfe-42ce-414a-815c-5feeaaf675cb"
-    # },
+     {
+         "id": 899,
+         "name": "JHD",
+         "pickup_time": "20:00",
+         "platform": "Platform 34",
+         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/78499cfe-42ce-414a-815c-5feeaaf675cb"
+     },
     
     {
         "id": 0, 
