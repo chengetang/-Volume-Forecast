@@ -29,6 +29,14 @@ stations = [
         "platform": "Platform 80",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/188141ec-d65a-464d-be96-4b6d00343c49",
         "webhoo_2": "https://open.feishu.cn/open-apis/bot/v2/hook/188141ec-d65a-464d-be96-4b6d00343c49"
+    },
+
+    {
+        "id": 1092,
+        "name": "ACT",
+        "pickup_time": "20:00",
+        "platform": "Platform 80",
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/188141ec-d65a-464d-be96-4b6d00343c49",
     }
 ]
 
