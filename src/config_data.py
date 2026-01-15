@@ -445,6 +445,13 @@ stations = [
         "pickup_time": "21:00 - 21:30",
         "platform": "Platform ***",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/f19f4b88-b9eb-4fdf-bef5-35133f9d85cf"     
+    },
+    {
+        "id": 1421,
+        "name": "RMO",
+        "pickup_time": "***",
+        "platform": "Platform ***",
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/6f06f56b-1446-4eef-a731-8ee765f7d801"  
     }
 ]
 
