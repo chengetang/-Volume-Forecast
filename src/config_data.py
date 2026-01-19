@@ -158,8 +158,8 @@ stations = [
     {
         "id": 1339,
         "name": "TSI",
-        "pickup_time": "19:00",
-        "platform": "Platform 27",
+        "pickup_time": "20:00",
+        "platform": "Platform 89",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/a4841ae0-5e7b-46fc-a8a5-357fe5c50630"
     },
     {
@@ -365,8 +365,8 @@ stations = [
     {
         "id": 1378,
         "name": "MOF",
-        "pickup_time": "20:30",
-        "platform": "Platform 76",
+        "pickup_time": "20:00",
+        "platform": "Platform 89",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/d7febf15-1965-4ac5-9117-87643a7c5571"
     },
     {
@@ -429,7 +429,7 @@ stations = [
         "id": 1420,
         "name": "AWK",
         "pickup_time": "19:00",
-        "platform": "Platform 34",
+        "platform": "Platform 27",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/23c1511d-e854-4aff-b9c0-ab8bae58835b"     
     },
     {
@@ -466,6 +466,13 @@ stations = [
         "pickup_time": "***",
         "platform": "Platform ***",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/880e994b-d21b-42e6-a153-80eebd667f83"  
+    },
+    {
+        "id": 1426,
+        "name": "STH",
+        "pickup_time": "20:00",
+        "platform": "Platform 26",
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/debe3c37-0bd5-4340-b5a4-43def659e571"  
     }
 ]
 
