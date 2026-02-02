@@ -453,13 +453,13 @@ stations = [
         "platform": "Platform ***",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/6f06f56b-1446-4eef-a731-8ee765f7d801"  
     },
-    # {
-    #     "id": 1429,
-    #     "name": "BOT",
-    #     "pickup_time": "***",
-    #     "platform": "Platform ***",
-    #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/bfc7bd94-4751-4e06-931b-d6c5b5b8ce80"  
-    # },
+    {
+        "id": 1429,
+        "name": "BOT",
+        "pickup_time": "***",
+        "platform": "Platform ***",
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/bfc7bd94-4751-4e06-931b-d6c5b5b8ce80"  
+    },
     {
         "id": 1425,
         "name": "KRB",
