@@ -1,4 +1,4 @@
-"""
+f"""
 货量预报工具配置文件
 团队成员共享使用
 """
@@ -262,7 +262,8 @@ stations = [
         "name": "TR6",
         "pickup_time": "20:00",
         "platform": "Platform 32",
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/a95e75de-b77c-4278-a178-80211c4d33a6"
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/a95e75de-b77c-4278-a178-80211c4d33a6",
+        "webhook_2": "https://open.feishu.cn/open-apis/bot/v2/hook/acbc5b52-ce2e-458a-bbd8-fc2b5183e88d"
     },
     {
         "id": 1364,
@@ -416,7 +417,8 @@ stations = [
         "name": "T4U",
         "pickup_time": "20:00",
         "platform": "Platform 31",
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/5ff782cd-a708-4cee-af64-5f963fea4f53"     
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/5ff782cd-a708-4cee-af64-5f963fea4f53",
+        "webhook_2": "https://open.feishu.cn/open-apis/bot/v2/hook/7df11ffa-359a-4f48-8a2e-2eb64e1e3fab"
     },
     {
         "id": 1418,
