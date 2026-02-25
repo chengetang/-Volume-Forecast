@@ -247,6 +247,13 @@ stations = [
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/0d08292a-af0e-4bf6-8724-4542b626ae46"
     },
     {
+        "id": 1445,
+        "name": "SFT1",
+        "pickup_time": "21:00",
+        "platform": "Platform A04",
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/0d08292a-af0e-4bf6-8724-4542b626ae46"
+    },
+    {
         "id": 1342,
         "name": "FPS",
         "pickup_time": "19:45",
