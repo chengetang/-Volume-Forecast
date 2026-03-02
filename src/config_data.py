@@ -678,7 +678,14 @@ stations = [
         "pickup_time": "***",
         "platform": "Platform ***",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/05b0da0b-faf2-44cb-9e7d-3772acd844b0"
-    }
+    },
+    {
+        "id": 1438,
+        "name": "SS4",
+        "pickup_time": "***",
+        "platform": "Platform ***",
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/47994b32-1daa-48c7-a94e-b272525a17ce"
+    },
 ]
 
 # ==================== API 配置 ====================
