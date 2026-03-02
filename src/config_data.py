@@ -139,15 +139,15 @@ stations = [
          "platform": "Platform 34",
          "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/78499cfe-42ce-414a-815c-5feeaaf675cb"
     },
-    {
-        "id": 0, 
-        # "id": 948,
-        "name": "INB",
-        "pickup_time": "19:00",
-        "platform": "Platform 84",
-        # "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/188141ec-d65a-464d-be96-4b6d00343c49" # 测试
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/9eb00e37-5c08-4b3e-a8d9-d41adc21ae25"
-    },
+    # {
+    #     "id": 0, 
+    #     # "id": 948,
+    #     "name": "INB",
+    #     "pickup_time": "19:00",
+    #     "platform": "Platform 84",
+    #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/188141ec-d65a-464d-be96-4b6d00343c49" # 测试
+    #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/9eb00e37-5c08-4b3e-a8d9-d41adc21ae25"
+    # },
     {
         "id": 1002,
         "name": "RIN",
@@ -359,15 +359,15 @@ stations = [
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/fe7a2762-e23a-48e8-9194-02904871270a"
     },
     
-    {
-        "id": 0,
-        # "id": 1354,
-        "name": "B88",
-        "pickup_time": "21:00",
-        "platform": "Platform 5",
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/a605f6fa-1eff-419a-8e4b-0f954bad96e4"
-        # "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/188141ec-d65a-464d-be96-4b6d00343c49" #测试
-    },
+    # {
+    #     "id": 0,
+    #     "id": 1354,
+    #     "name": "B88",
+    #     "pickup_time": "21:00",
+    #     "platform": "Platform 5",
+    #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/a605f6fa-1eff-419a-8e4b-0f954bad96e4"
+    #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/188141ec-d65a-464d-be96-4b6d00343c49" #测试
+    # },
     
     {
         "id": 1355,
