@@ -5,13 +5,13 @@
 
 # ==================== 站点基础数据配置 ====================
 stations = [
-    {
-        "id": 758, 
-        "name": "PSW", 
-        "pickup_time": "20:30", 
-        "platform": "Platform 83",
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/bd1776d2-bf7f-4bbe-8bd3-e44eca8c3a4f"
-    },
+    # {
+    #     "id": 758, 
+    #     "name": "PSW", 
+    #     "pickup_time": "20:30", 
+    #     "platform": "Platform 83",
+    #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/bd1776d2-bf7f-4bbe-8bd3-e44eca8c3a4f"
+    # },
     {
         "id": 761,
         "name": "C4T",
@@ -397,13 +397,13 @@ stations = [
         "platform": "Platform 27",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/107f5940-4abc-4b7f-8838-03d0c8eef77f"
     },
-    {
-        "id": 1359,
-        "name": "AFM",
-        "pickup_time": "19:00",
-        "platform": "Platform 83",
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/f9224be2-e834-41f4-8373-7e6cb561226a"
-    },
+    # {
+    #     "id": 1359,
+    #     "name": "AFM",
+    #     "pickup_time": "19:00",
+    #     "platform": "Platform 83",
+    #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/f9224be2-e834-41f4-8373-7e6cb561226a"
+    # },
     {
         "id": 1366,
         "name": "TR6",
