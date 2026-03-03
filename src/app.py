@@ -529,7 +529,7 @@ if 'df_merge' in locals():
                         "tag": "div",
                         "fields": [
                             {"is_short": True, "text": {"tag": "lark_md", "content": f"**Already Sorted**\n<font color='blue'>{today_count}</font>"}},
-                            {"is_short": True, "text": {"tag": "lark_md", "content": f"**Estimated Total Number**\n<font color='green'>{total_count}</font>"}},
+                            {"is_short": True, "text": {"tag": "lark_md", "content": f"**Packages in Warehouse Now**\n<font color='green'>{total_count}</font>"}},
                             {"is_short": False, "text": {"tag": "lark_md", "content": ""}},
                         ]
                     },
