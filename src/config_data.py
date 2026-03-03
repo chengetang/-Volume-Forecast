@@ -452,14 +452,14 @@ stations = [
         "name": "SWC",
         "pickup_time": "21:00",
         "platform": "Platform ***",
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/857ddb47-24cd-4d49-a089-c2cc61d12e79"
+        #"webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/857ddb47-24cd-4d49-a089-c2cc61d12e79"
     },
     {
         "id": 1383,
         "name": "LEY",
         "pickup_time": "21:00",
         "platform": "Platform ***",
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/daeb8c2a-1615-4fef-b67a-50211a1ac1c8"
+        #"webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/daeb8c2a-1615-4fef-b67a-50211a1ac1c8"
     },
     {
         "id": 1385,
