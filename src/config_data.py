@@ -72,8 +72,8 @@ stations = [
     {
         "id": 878,
         "name": "ANA",
-        "pickup_time": "21:00",
-        "platform": "Platform A05",
+        "pickup_time": "***",
+        "platform": "Platform ***",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/37c5a6ee-5a8c-4de5-8964-798649fc364a"
     },
     {
