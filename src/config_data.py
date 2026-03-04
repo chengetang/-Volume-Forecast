@@ -158,8 +158,8 @@ stations = [
     {
         "id": 1092,
         "name": "ACT",
-        "pickup_time": "3:00",
-        "platform": "Platform 85",
+        "pickup_time": "***",
+        "platform": "Platform ***",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/8794cb6b-5734-420e-8684-c0eb9749f598"
     },
     {
@@ -249,8 +249,8 @@ stations = [
     {
         "id": 1329,
         "name": "GAL",
-        "pickup_time": "3:00",
-        "platform": "Platform 32",
+        "pickup_time": "***",
+        "platform": "Platform ***",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/866f6dd5-a8aa-4454-bf99-207b11d382f9"
     },
     {
@@ -298,8 +298,8 @@ stations = [
     {
         "id": 1339,
         "name": "TSI",
-        "pickup_time": "4:00",
-        "platform": "Platform 91",
+        "pickup_time": "3:00",
+        "platform": "Platform 85",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/a4841ae0-5e7b-46fc-a8a5-357fe5c50630"
     },
     {
@@ -513,8 +513,8 @@ stations = [
     {
         "id": 1378,
         "name": "MOF",
-        "pickup_time": "4:00",
-        "platform": "Platform 91",
+        "pickup_time": "3:00",
+        "platform": "Platform 85",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/d7febf15-1965-4ac5-9117-87643a7c5571"
     },
     {
