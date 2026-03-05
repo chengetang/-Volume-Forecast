@@ -798,6 +798,13 @@ stations = [
         "platform": "Platform ***",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/47994b32-1daa-48c7-a94e-b272525a17ce"
     },
+    {
+        "id": 1430,
+        "name": "DDS",
+        "pickup_time": "***",
+        "platform": "Platform ***",
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/67a7c422-9dcf-46c3-aff9-36181c7d472a"
+    }
 ]
 
 # ==================== API 配置 ====================
