@@ -72,57 +72,57 @@ stations = [
     {
         "id": 878,
         "name": "ANA",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A05",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/37c5a6ee-5a8c-4de5-8964-798649fc364a"
     },
     {
         "id": 1454,
         "name": "ANA1",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A05",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/37c5a6ee-5a8c-4de5-8964-798649fc364a"
     },
     {
         "id": 1455,
         "name": "ANA2",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A05",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/37c5a6ee-5a8c-4de5-8964-798649fc364a"
     },
     {
         "id": 1456,
         "name": "ANA3",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A05",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/37c5a6ee-5a8c-4de5-8964-798649fc364a"
     },
     {
         "id": 1457,
         "name": "ANA4",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A05",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/37c5a6ee-5a8c-4de5-8964-798649fc364a"
     },
     {
         "id": 1458,
         "name": "ANA5",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A05",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/37c5a6ee-5a8c-4de5-8964-798649fc364a"
     },
     {
         "id": 1459,
         "name": "ANA6",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A05",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/37c5a6ee-5a8c-4de5-8964-798649fc364a"
     },
     {
         "id": 1460,
         "name": "ANA7",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A05",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/37c5a6ee-5a8c-4de5-8964-798649fc364a"
     },
     {
@@ -179,29 +179,29 @@ stations = [
     {
         "id": 1193,
         "name": "OMT",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A01",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/058b48dc-6979-4d3c-ab4f-f089a1fa1c60"
     },
     {
         "id": 1490,
         "name": "OMT1",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A01",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/058b48dc-6979-4d3c-ab4f-f089a1fa1c60"
     },
     {
         "id": 1491,
         "name": "OMT2",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A01",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/058b48dc-6979-4d3c-ab4f-f089a1fa1c60"
     },
     {
         "id": 1492,
         "name": "OMT3",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A01",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/058b48dc-6979-4d3c-ab4f-f089a1fa1c60"
     },
     {
@@ -214,43 +214,43 @@ stations = [
     {
         "id": 1266,
         "name": "DET",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A05",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/c0da2b16-b8e8-4316-8292-08f13ea25715"
     },
     {
         "id": 1439,
         "name": "DET1",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A05",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/c0da2b16-b8e8-4316-8292-08f13ea25715"
     },
     {
         "id": 1440,
         "name": "DET2",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A05",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/c0da2b16-b8e8-4316-8292-08f13ea25715"
     },
     {
         "id": 1441,
         "name": "DET3",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A05",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/c0da2b16-b8e8-4316-8292-08f13ea25715"
     },
     {
         "id": 1442,
         "name": "DET4",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A05",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/c0da2b16-b8e8-4316-8292-08f13ea25715"
     },
     {
         "id": 1443,
         "name": "DET5",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A05",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/c0da2b16-b8e8-4316-8292-08f13ea25715"
     },
     {
@@ -291,29 +291,29 @@ stations = [
     {
         "id": 1334,
         "name": "AAA",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A01",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/160b24c1-1cb3-4e5f-814b-d8d244f8f978"
     },
     {
         "id": 1461,
         "name": "AAA1",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A01",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/160b24c1-1cb3-4e5f-814b-d8d244f8f978"
     },
     {
         "id": 1462,
         "name": "AAA2",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A01",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/160b24c1-1cb3-4e5f-814b-d8d244f8f978"
     },
     {
         "id": 1463,
         "name": "AAA3",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A01",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/160b24c1-1cb3-4e5f-814b-d8d244f8f978"
     },
     {
@@ -333,15 +333,15 @@ stations = [
     {
         "id": 1341,
         "name": "SFT",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A04",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/0d08292a-af0e-4bf6-8724-4542b626ae46"
     },
     {
         "id": 1445,
         "name": "SFT1",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A04",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/0d08292a-af0e-4bf6-8724-4542b626ae46"
     },
     {
@@ -520,43 +520,43 @@ stations = [
     {
         "id": 1347,
         "name": "HA6",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A02",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/dc4561ce-9d55-4fbc-8c17-f147263ebb4d"
     },
     {
         "id": 1481,
         "name": "HA61",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A02",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/dc4561ce-9d55-4fbc-8c17-f147263ebb4d"
     },
     {
         "id": 1482,
         "name": "HA62",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A02",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/dc4561ce-9d55-4fbc-8c17-f147263ebb4d"
     },
     {
         "id": 1483,
         "name": "HA63",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A02",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/dc4561ce-9d55-4fbc-8c17-f147263ebb4d"
     },
     {
         "id": 1484,
         "name": "HA64",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A02",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/dc4561ce-9d55-4fbc-8c17-f147263ebb4d"
     },
     {
         "id": 1485,
         "name": "HA65",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A02",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/dc4561ce-9d55-4fbc-8c17-f147263ebb4d"
     },
     {
@@ -618,36 +618,36 @@ stations = [
     {
         "id": 1389,
         "name": "PMS",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A02",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/31bdf103-7ec9-4429-a27a-c709fef64c05"
     },
     {
         "id": 1450,
         "name": "PMS1",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A02",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/31bdf103-7ec9-4429-a27a-c709fef64c05"
     },
     {
         "id": 1451,
         "name": "PMS2",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A02",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/31bdf103-7ec9-4429-a27a-c709fef64c05"
     },
     {
         "id": 1452,
         "name": "PMS3",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A02",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/31bdf103-7ec9-4429-a27a-c709fef64c05"
     },
     {
         "id": 1453,
         "name": "PMS4",
-        "pickup_time": "***",
-        "platform": "Platform ***",
+        "pickup_time": "05:00",
+        "platform": "Platform A02",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/31bdf103-7ec9-4429-a27a-c709fef64c05"
     },
     {
