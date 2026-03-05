@@ -281,13 +281,13 @@ stations = [
         "platform": "Platform 31",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/c42978a2-826b-4974-9162-cac3e2ed572b"
     },
-    # {
-    #     "id": 1332,
-    #     "name": "RKM",
-    #     "pickup_time": "19:00",
-    #     "platform": "Platform 82",
-    #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/25eaa0c5-90ac-4028-82bd-9803c63631f3"
-    # },
+    {
+        "id": 1332,
+        "name": "RKM",
+        "pickup_time": "***",
+        "platform": "***",
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/25eaa0c5-90ac-4028-82bd-9803c63631f3"
+    },
     {
         "id": 1334,
         "name": "AAA",
