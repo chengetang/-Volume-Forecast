@@ -215,42 +215,42 @@ stations = [
         "id": 1266,
         "name": "DET",
         "pickup_time": "05:00",
-        "platform": "Platform A05",
+        "platform": "Platform A04",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/c0da2b16-b8e8-4316-8292-08f13ea25715"
     },
     {
         "id": 1439,
         "name": "DET1",
         "pickup_time": "05:00",
-        "platform": "Platform A05",
+        "platform": "Platform A04",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/c0da2b16-b8e8-4316-8292-08f13ea25715"
     },
     {
         "id": 1440,
         "name": "DET2",
         "pickup_time": "05:00",
-        "platform": "Platform A05",
+        "platform": "Platform A04",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/c0da2b16-b8e8-4316-8292-08f13ea25715"
     },
     {
         "id": 1441,
         "name": "DET3",
         "pickup_time": "05:00",
-        "platform": "Platform A05",
+        "platform": "Platform A04",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/c0da2b16-b8e8-4316-8292-08f13ea25715"
     },
     {
         "id": 1442,
         "name": "DET4",
         "pickup_time": "05:00",
-        "platform": "Platform A05",
+        "platform": "Platform A04",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/c0da2b16-b8e8-4316-8292-08f13ea25715"
     },
     {
         "id": 1443,
         "name": "DET5",
         "pickup_time": "05:00",
-        "platform": "Platform A05",
+        "platform": "Platform A04",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/c0da2b16-b8e8-4316-8292-08f13ea25715"
     },
     {
