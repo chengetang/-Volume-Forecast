@@ -66,8 +66,7 @@ stations = [
         "name": "WER", 
         "pickup_time": "5:00", 
         "platform": "Platform 83",
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/a8e2666b-d0dd-419b-b706-a65742a2bd69",
-        "webhook_2": "https://open.feishu.cn/open-apis/bot/v2/hook/120e1bf5-7050-4e57-93c3-b7f640c42992"
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/a8e2666b-d0dd-419b-b706-a65742a2bd69"
     },
     {
         "id": 878,
