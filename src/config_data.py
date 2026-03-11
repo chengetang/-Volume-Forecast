@@ -810,6 +810,13 @@ stations = [
         "pickup_time": "05:00",
         "platform": "Platform A01",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/9ea57812-45e4-44bd-bd3d-c123fc64123e"
+    },
+    {
+        "id": 1474,
+        "name": "DVE",
+        "pickup_time": "***",
+        "platform": "***",
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/a54e81da-b65d-40fe-96b4-4775ae65b6d8"
     }
 ]
 
