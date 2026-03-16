@@ -833,7 +833,7 @@ API_CONFIG = {
 
 # ==================== 查询参数配置 ====================
 QUERY_CONFIG = {
-    'departed_list_today': ["2", "7", "1", "5", "6"],
+    'departed_list_today': ["2", "7", "5", "6"],
     'departed_list_past': ["7", "2"],
     'center_ids': [753], # 中心ID
     'page_size': 50, # 分页大小
