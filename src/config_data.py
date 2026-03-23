@@ -467,13 +467,13 @@ stations = [
         "platform": "Platform 84",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/5ad729cb-c477-4360-b5f7-b7e295e0079f"
     },
-    {
-        "id": 1368,
-        "name": "DIA",
-        "pickup_time": "21:00",
-        "platform": "Platform 7",
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/dcb0f50d-72a0-4735-a8c2-f4b4872748bb"
-    },
+    # {
+    #     "id": 1368,
+    #     "name": "DIA",
+    #     "pickup_time": "21:00",
+    #     "platform": "Platform 7",
+    #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/dcb0f50d-72a0-4735-a8c2-f4b4872748bb"
+    # },
     {
         "id": 1370,
         "name": "BFF",
