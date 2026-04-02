@@ -817,6 +817,13 @@ stations = [
         "pickup_time": "***",
         "platform": "***",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/a54e81da-b65d-40fe-96b4-4775ae65b6d8"
+    },
+    {
+        "id": 1499,
+        "name": "MYR",
+        "pickup_time": "***",
+        "platform": "***",
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/6550e6c5-8602-49cf-9876-dd2e51315fd9"
     }
 ]
 
