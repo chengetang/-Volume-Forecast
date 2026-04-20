@@ -824,6 +824,13 @@ stations = [
         "pickup_time": "***",
         "platform": "***",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/6550e6c5-8602-49cf-9876-dd2e51315fd9"
+    },
+    {
+        "id": 1500,
+        "name": "KDM",
+        "pickup_time": "***",
+        "platform": "***",
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/60924586-7851-489d-add8-610148d711e8"
     }
 ]
 
