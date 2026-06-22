@@ -831,6 +831,13 @@ stations = [
         "pickup_time": "***",
         "platform": "***",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/60924586-7851-489d-add8-610148d711e8"
+    },
+    {
+        "id": 1504,
+        "name": "E55",
+        "pickup_time": "***",
+        "platform": "***",
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/3393630e-f025-4cfd-89a4-48850b1a39e3"
     }
 ]
 
