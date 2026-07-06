@@ -1,3 +1,4 @@
+
 """
 货量预报工具配置文件
 团队成员共享使用
@@ -663,14 +664,14 @@ stations = [
         "platform": "Platform ***",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/23e6507f-1f4d-448b-8631-bad6776716c1"     
     },
-    {
-        "id": 1413,
-        "name": "T4U",
-        "pickup_time": "3:00",
-        "platform": "Platform 31",
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/5ff782cd-a708-4cee-af64-5f963fea4f53",
-        "webhook_2": "https://open.feishu.cn/open-apis/bot/v2/hook/7df11ffa-359a-4f48-8a2e-2eb64e1e3fab"
-    },
+    # {
+    #     "id": 1413,
+    #     "name": "T4U",
+    #     "pickup_time": "3:00",
+    #     "platform": "Platform 31",
+    #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/5ff782cd-a708-4cee-af64-5f963fea4f53",
+    #     "webhook_2": "https://open.feishu.cn/open-apis/bot/v2/hook/7df11ffa-359a-4f48-8a2e-2eb64e1e3fab"
+    # },
     {
         "id": 1418,
         "name": "PRE",
