@@ -254,6 +254,13 @@ stations = [
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/c0da2b16-b8e8-4316-8292-08f13ea25715"
     },
     {
+        "id": 1509,
+        "name": "DET6",
+        "pickup_time": "05:00",
+        "platform": "Platform A04",
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/c0da2b16-b8e8-4316-8292-08f13ea25715"
+    },
+    {
         "id": 1326,
         "name": "AAT",
         "pickup_time": "***",
