@@ -4,39 +4,23 @@
 """
 
 # ==================== 站点基础数据配置 ====================
-stations = [
-    {
-        "id": 758, 
-        "name": "PSW", 
-        "pickup_time": "20:30", 
-        "platform": "Platform 83",
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/188141ec-d65a-464d-be96-4b6d00343c49",
-        "webhook_2": "https://open.feishu.cn/open-apis/bot/v2/hook/188141ec-d65a-464d-be96-4b6d00343c49"
-    },
-
-    {
-        "id": 768, 
-        "name": "WER", 
-        "pickup_time": "20:30", 
-        "platform": "Platform 79",
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/188141ec-d65a-464d-be96-4b6d00343c49",
-    },
-
-    {
-        "id": 761,
-        "name": "C4T",
-        "pickup_time": "20:00",
-        "platform": "Platform 80",
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/188141ec-d65a-464d-be96-4b6d00343c49",
-        "webhoo_2": "https://open.feishu.cn/open-apis/bot/v2/hook/188141ec-d65a-464d-be96-4b6d00343c49"
-    },
+stations_special_request = [
 
     {
         "id": 1092,
         "name": "ACT",
-        "pickup_time": "20:00",
-        "platform": "Platform 80",
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/188141ec-d65a-464d-be96-4b6d00343c49",
+        "pickup_time": "***",
+        "platform": "***",
+        # "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/188141ec-d65a-464d-be96-4b6d00343c49",
+    }
+]
+stations = [
+    {
+            "id": 1504,
+            "name": "E55",
+            "pickup_time": "***",
+            "platform": "***",
+            # "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/3393630e-f025-4cfd-89a4-48850b1a39e3"
     }
 ]
 
@@ -45,7 +29,9 @@ API_CONFIG = {
     'base_url': 'https://cps.cirroparcel.nl/prod-api',
     'endpoints': {
         'total_count': '/ops/centerPack/totalCount',
-        'status_details': '/dbu_report/common/magic/eu/center/board/status/details'
+        'status_details': '/dbu_report/common/magic/eu/center/board/status/details',
+        'select_page_list': '/ops/centerPack/selectPageList',
+        'pack_detail': '/ops/centerPack/detail'
     },
     'timeout': 20,
     'retry_times': 3
@@ -57,7 +43,10 @@ QUERY_CONFIG = {
     'departed_list_past': ["7", "2"],
     'center_ids': [753], # 中心ID
     'page_size': 50, # 分页大小
-    'status_page_size': 10
+    'status_page_size': 10,
+    'status_checked_in_awaiting_group': 30, # 签入待集包（按站点查明细，含 postCode）
+    'status_arrival_not_checked_in': 121, # 到件未签入（整日查询，不按到车单号，含 postCode）
+    'detail_page_size': 500, # 明细查询分页大小（用于整日全量拉取，减少请求次数）
 }
 
 # ==================== 请求头配置 ====================
@@ -89,6 +78,14 @@ TOKEN_CONFIG = {
 }
 
 # ==================== 飞书消息配置 ====================
+FEISHU_CONFIG_POSTCODE = {
+    'msg_type': 'interactive',
+    'header_template': 'blue',
+    'request_timeout': 10,
+    'sleep_between_requests': 1
+}
+
+# 普通站点沿用 app.py 原有的卡片格式（Already Sorted 总数 + Estimated Total Number）
 FEISHU_CONFIG = {
     'msg_type': 'interactive',
     'header_template': 'blue',
@@ -98,7 +95,6 @@ FEISHU_CONFIG = {
 
 # ==================== 文件输出配置 ====================
 OUTPUT_CONFIG = {
-    'excel_filename': '最终合并报告.xlsx',
     'sheet_name': '数据汇总'
 }
 
