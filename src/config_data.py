@@ -700,34 +700,34 @@ stations = [
         "platform": "Platform ***",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/6f06f56b-1446-4eef-a731-8ee765f7d801"  
     },
-    {
-        "id": 1446,
-        "name": "RMO1",
-        "pickup_time": "***",
-        "platform": "Platform ***",
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/6f06f56b-1446-4eef-a731-8ee765f7d801"  
-    },
-    {
-        "id": 1447,
-        "name": "RMO2",
-        "pickup_time": "***",
-        "platform": "Platform ***",
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/6f06f56b-1446-4eef-a731-8ee765f7d801"  
-    },
-    {
-        "id": 1448,
-        "name": "RMO3",
-        "pickup_time": "***",
-        "platform": "Platform ***",
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/6f06f56b-1446-4eef-a731-8ee765f7d801"  
-    },
-    {
-        "id": 1449,
-        "name": "RMO4",
-        "pickup_time": "***",
-        "platform": "Platform ***",
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/6f06f56b-1446-4eef-a731-8ee765f7d801"  
-    },
+    # {
+    #     "id": 1446,
+    #     "name": "RMO1",
+    #     "pickup_time": "***",
+    #     "platform": "Platform ***",
+    #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/6f06f56b-1446-4eef-a731-8ee765f7d801"  
+    # },
+    # {
+    #     "id": 1447,
+    #     "name": "RMO2",
+    #     "pickup_time": "***",
+    #     "platform": "Platform ***",
+    #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/6f06f56b-1446-4eef-a731-8ee765f7d801"  
+    # },
+    # {
+    #     "id": 1448,
+    #     "name": "RMO3",
+    #     "pickup_time": "***",
+    #     "platform": "Platform ***",
+    #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/6f06f56b-1446-4eef-a731-8ee765f7d801"  
+    # },
+    # {
+    #     "id": 1449,
+    #     "name": "RMO4",
+    #     "pickup_time": "***",
+    #     "platform": "Platform ***",
+    #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/6f06f56b-1446-4eef-a731-8ee765f7d801"  
+    # },
     {
         "id": 1429,
         "name": "BOT",

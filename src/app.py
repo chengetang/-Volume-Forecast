@@ -144,8 +144,13 @@ past_period_begin_time = six_days_ago_date.strftime('%Y-%m-%d') + " 00:00:00"
 past_period_end_time = yesterday_date.strftime('%Y-%m-%d') + " 23:59:59"
 today_str = today_date.strftime('%Y-%m-%d')
 
+# stations_special_request 专用：只查"今日"窗口（从昨天 00:00 到今天 23:59），
+# 覆盖次日凌晨运行时仍是 sortFlag='N' 的昨日包裹；不再需要单独查前六日
+today_begin_time_special = yesterday_date.strftime('%Y-%m-%d') + " 00:00:00"
+
 print(f"今日范围: {today_begin_time} ~ {today_end_time}")
 print(f"前六日范围: {past_period_begin_time} ~ {past_period_end_time}")
+print(f"今日范围（邮编明细站点）: {today_begin_time_special} ~ {today_end_time}")
 
 # --- 获取 Token ---
 print("正在尝试从浏览器 localStorage 自动获取 Authorization Token...")
@@ -436,33 +441,52 @@ def fetch_packed_detail(departed_list, begin_time, end_time, period_label):
         collected_before = len(detail_records)
 
         for _, pkg in pending_packages.iterrows():
-            detail_payload = {"pageNum": 1, "pageSize": 10, "packageNo": pkg['packageNo']}
-            try:
-                detail_response = requests.post(detail_api_url, headers=headers, json=detail_payload, timeout=API_CONFIG['timeout'])
-                if detail_response.status_code != 200:
-                    continue
+            detail_page_num = 1
+            all_detail_items = []
 
-                detail_data = detail_response.json().get('data') or {}
-                # 一个 packageNo 可能包含多个 waybillNo，各自 toCode 也可能不同
-                detail_list = detail_data.get('list') or []
+            while True:
+                detail_payload = {
+                    "pageNum": detail_page_num,
+                    "pageSize": QUERY_CONFIG['detail_page_size'],
+                    "packageNo": pkg['packageNo']
+                }
+                try:
+                    detail_response = requests.post(detail_api_url, headers=headers, json=detail_payload, timeout=API_CONFIG['timeout'])
+                    if detail_response.status_code != 200:
+                        break
 
-                collect_detail_records([{
-                    'waybillNo': item.get('waybillNo'),
-                    'targetCenterName': pkg['destinCenterName'],
-                    'targetSiteId': pkg['destinId'],
-                    'targetSiteName': pkg['destinName'],
-                    'postCode': item.get('toCode'),
-                } for item in detail_list], '已集包')
-            except requests.exceptions.RequestException:
-                pass
+                    detail_data = detail_response.json().get('data') or {}
+                    # 一个 packageNo 可能包含多个 waybillNo（跨多页），各自 toCode 也可能不同
+                    all_detail_items.extend(detail_data.get('list') or [])
+
+                    total_pages = detail_data.get('pages', 1)
+                    current_page = detail_data.get('current', detail_page_num)
+                    if current_page >= total_pages:
+                        break
+                    detail_page_num += 1
+                except requests.exceptions.RequestException:
+                    break
+
+                time.sleep(SYSTEM_CONFIG['sleep_between_requests'])
+
+            collect_detail_records([{
+                'waybillNo': item.get('waybillNo'),
+                'targetCenterName': pkg['destinCenterName'],
+                'targetSiteId': pkg['destinId'],
+                'targetSiteName': pkg['destinName'],
+                'postCode': item.get('toCode'),
+            } for item in all_detail_items], '已集包')
 
             time.sleep(SYSTEM_CONFIG['sleep_between_requests'])
 
         print(f"--- [已集包-{period_label}] {dest_name}: 写入 {len(detail_records) - collected_before} 件 ---")
 
 
+# stations_special_request 只需要 type=已集包，以下两个明细查询（签入待集包 status=30 /
+# 到件未签入 status=121）暂时不需要，整体注释掉，保留代码以备将来需要时恢复
+"""
 def fetch_checked_in_awaiting_group_detail():
-    """签入待集包 status=30：按站点查询明细（含 postCode）"""
+    ""\"签入待集包 status=30：按站点查询明细（含 postCode）""\"
     if not ('auth_token' in globals() and auth_token):
         return
 
@@ -512,7 +536,7 @@ def fetch_checked_in_awaiting_group_detail():
 
 
 def fetch_arrival_not_checked_in_detail():
-    """到件未签入 status=121：整日全量查询（不按到车单号），本地按站点过滤"""
+    ""\"到件未签入 status=121：整日全量查询（不按到车单号），本地按站点过滤""\"
     if not ('auth_token' in globals() and auth_token):
         return
 
@@ -565,13 +589,13 @@ def fetch_arrival_not_checked_in_detail():
             arrival_counts[r['targetSiteName']] = arrival_counts.get(r['targetSiteName'], 0) + 1
     for site_name, cnt in arrival_counts.items():
         print(f"--- [到件未签入] {site_name}: {cnt} 件 ---")
+"""
 
 
 def run_special_stations():
-    fetch_packed_detail(QUERY_CONFIG['departed_list_today'], today_begin_time, today_end_time, '今日')
-    fetch_packed_detail(QUERY_CONFIG['departed_list_past'], past_period_begin_time, past_period_end_time, '前六日')
-    fetch_checked_in_awaiting_group_detail()
-    fetch_arrival_not_checked_in_detail()
+    fetch_packed_detail(QUERY_CONFIG['departed_list_today'], today_begin_time_special, today_end_time, '今日')
+    # fetch_checked_in_awaiting_group_detail()  # 暂不需要：stations_special_request 只需要 type=已集包
+    # fetch_arrival_not_checked_in_detail()     # 暂不需要：stations_special_request 只需要 type=已集包
 
     # 直接用内存中的 DataFrame 聚合，不落 Excel
     df_detail = pd.DataFrame(
@@ -580,6 +604,14 @@ def run_special_stations():
     )
     df_detail['targetSiteId'] = pd.to_numeric(df_detail['targetSiteId'], errors='coerce').astype('Int64')
     df_detail['postCode'] = pd.to_numeric(df_detail['postCode'], errors='coerce').astype('Int64')
+
+    # 同一个 waybillNo 可能出现在多个 packageNo 下，按 waybillNo 去重防止重复计数；
+    # waybillNo 缺失的行无法判断是否重复，保留不去重
+    has_waybill = df_detail['waybillNo'].notna()
+    df_detail = pd.concat([
+        df_detail[~has_waybill],
+        df_detail[has_waybill].drop_duplicates(subset=['waybillNo'])
+    ], ignore_index=True)
 
     print(f"\n==================== 开始为 {len(stations_special_request)} 个邮编明细站点发送飞书卡片 ====================")
     for station in stations_special_request:
@@ -597,6 +629,8 @@ def run_special_stations():
         if missing_postcode_count:
             print(f"⚠️ {dest_name}: {missing_postcode_count} 件已集包包裹缺少有效 postCode，将单独计入 '未知'")
 
+        # 按 destinId 聚合出总数，再按 (destinId, postCode) 聚合出邮编明细
+        total_count = len(df_packed)
         postcode_counts = df_packed.groupby('postCode', dropna=False).size().sort_index()
         postcode_counts.index = postcode_counts.index.map(lambda pc: '未知' if pd.isna(pc) else pc)
 
@@ -608,7 +642,9 @@ def run_special_stations():
                     "title": {"tag": "plain_text", "content": f"Volume Forecast {dest_name}"}
                 },
                 "elements": [
-                    {"tag": "div", "text": {"tag": "lark_md", "content": "**Already Sorted**"}},
+                    {"tag": "div", "text": {"tag": "lark_md", "content": f"**Already Sorted**\n<font color='blue'>{total_count}</font>"}},
+                    {"tag": "hr"},
+                    {"tag": "div", "text": {"tag": "lark_md", "content": "**By Postcode**"}},
                     {
                         "tag": "div",
                         "fields": [
