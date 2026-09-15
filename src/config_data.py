@@ -896,7 +896,7 @@ API_CONFIG = {
 
 # ==================== 查询参数配置 ====================
 QUERY_CONFIG = {
-    'departed_list_today': ["2", "7", "5", "6"],
+    'departed_list_today': ["2", "7", "5", "6", "1"], # 1 = 已出仓
     'departed_list_past': ["7", "2"],
     'center_ids': [753], # 中心ID
     'page_size': 50, # 分页大小
@@ -948,6 +948,13 @@ FEISHU_CONFIG_POSTCODE = {
     'header_template': 'blue',
     'request_timeout': 10,
     'sleep_between_requests': 1
+}
+
+# ==================== 邮编 -> 路线号 映射配置 ====================
+# 目前只有 ACT 有路线号映射表；其余邮编明细站点（如 GAL、MEK）继续展示原始邮编
+ROUTE_MAPPING_CONFIG = {
+    'file': 'data/ACT_postcode_mapping.xlsx',  # 相对项目根目录
+    'applies_to': ['ACT'],
 }
 
 # ==================== 系统配置 ====================

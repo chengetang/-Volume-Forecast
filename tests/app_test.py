@@ -46,10 +46,12 @@ try:
 
     global stations, stations_special_request, API_CONFIG, QUERY_CONFIG, HEADERS_CONFIG
     global TOKEN_CONFIG, FEISHU_CONFIG, FEISHU_CONFIG_POSTCODE, OUTPUT_CONFIG, SYSTEM_CONFIG
+    global ROUTE_MAPPING_CONFIG
 
     from config_data_test import (
         stations, stations_special_request, API_CONFIG, QUERY_CONFIG, HEADERS_CONFIG,
-        TOKEN_CONFIG, FEISHU_CONFIG, FEISHU_CONFIG_POSTCODE, OUTPUT_CONFIG, SYSTEM_CONFIG
+        TOKEN_CONFIG, FEISHU_CONFIG, FEISHU_CONFIG_POSTCODE, OUTPUT_CONFIG, SYSTEM_CONFIG,
+        ROUTE_MAPPING_CONFIG
     )
     print("✅ 配置文件加载成功")
     print(f"📊 加载的邮编站点数量: {len(stations_special_request)}")
@@ -67,6 +69,43 @@ except ImportError as e:
 
 detail_records = []
 tracked_site_ids = {str(station['id']) for station in stations_special_request}
+
+def _route_box_sort_key(label):
+    """按路线号标签里的第一个数字排序（如 '28+29+32' 排在 28 的位置），
+    未匹配到路线号的标签（未知 / has no scope yet）统一排到最后。"""
+    first_token = label.split('+')[0]
+    try:
+        return (0, int(first_token))
+    except ValueError:
+        return (1, label)
+
+
+def _load_route_mapping(relative_path):
+    """读取邮编 -> 路线号映射表（第一列=路线号 Scope，第二列=邮编 Postcode，带表头）。
+    同一个邮编可能对应多条路线（如相邻路线共管一个邮编），此时合并为 'A+B' 的形式展示。"""
+    project_root = os.path.dirname(SCRIPT_DIR)
+    mapping_path = os.path.join(project_root, relative_path)
+    if not os.path.exists(mapping_path):
+        print(f"⚠️ 未找到路线号映射表: {mapping_path}，相关站点将回退展示邮编")
+        return {}
+
+    df_mapping = pd.read_excel(mapping_path)
+    postcode_to_routes = {}
+    for _, row in df_mapping.iterrows():
+        # 单元格里的路线号本身可能已经是 "29+32" 这种组合路线，先拆成单个路线号再收集，
+        # 避免同一邮编出现在多行时把整段标签直接拼接，导致像 "55+60" + "60" 拼出重复的 "55+60+60"
+        route_tokens = [t.strip() for t in str(row.iloc[0]).split('+') if t.strip()]
+        try:
+            postcode = int(row.iloc[1])
+        except (ValueError, TypeError):
+            continue
+        postcode_to_routes.setdefault(postcode, set()).update(route_tokens)
+
+    return {pc: '+'.join(sorted(routes, key=int)) for pc, routes in postcode_to_routes.items()}
+
+
+ROUTE_MAPPING = _load_route_mapping(ROUTE_MAPPING_CONFIG['file'])
+
 
 def _collect_detail_records(records, record_type):
     for record in records:
@@ -536,7 +575,7 @@ for station in stations_special_request:
 # ==     暂不实际发送，改为生成本地 HTML 预览并自动打开          ==
 # =======================================================
 
-def _build_card_html(dest_name, total_count, postcode_counts, pickup_time, platform, updated_str):
+def _build_card_html(dest_name, total_count, postcode_counts, pickup_time, platform, updated_str, section_label='By Postcode'):
     tiles_html = "".join(
         f"""<div class="tile"><div class="pc">{postcode}</div><div class="cnt">{count}</div></div>"""
         for postcode, count in postcode_counts.items()
@@ -581,7 +620,7 @@ def _build_card_html(dest_name, total_count, postcode_counts, pickup_time, platf
     <div class="card-body">
       <p class="total-row">Already Sorted <span class="v">{total_count}</span></p>
       <hr class="divider" />
-      <p class="section-label">By Postcode</p>
+      <p class="section-label">{section_label}</p>
       <div class="postcode-grid">{tiles_html}</div>
       <hr class="divider" />
       <div class="field-pair">
@@ -613,7 +652,22 @@ for station in stations_special_request:
     # 按 destinId 聚合出总数，再按 (destinId, postCode) 聚合出邮编明细
     total_count = len(df_packed)
     postcode_counts = df_packed.groupby('postCode', dropna=False).size().sort_index()
-    postcode_counts.index = postcode_counts.index.map(lambda pc: '未知' if pd.isna(pc) else pc)
+
+    if dest_name in ROUTE_MAPPING_CONFIG['applies_to']:
+        # 该站点有路线号映射表：把邮编换成路线号展示；同一路线号合并计数
+        labeled_counts = {}
+        for postcode, count in postcode_counts.items():
+            if pd.isna(postcode):
+                label = '未知'
+            else:
+                label = ROUTE_MAPPING.get(int(postcode), f'Postcode {int(postcode)} has no scope yet')
+            labeled_counts[label] = labeled_counts.get(label, 0) + count
+        sorted_labels = sorted(labeled_counts.items(), key=lambda kv: _route_box_sort_key(kv[0]))
+        postcode_counts = pd.Series(dict(sorted_labels))
+        section_label = 'By Route Box'
+    else:
+        postcode_counts.index = postcode_counts.index.map(lambda pc: '未知' if pd.isna(pc) else pc)
+        section_label = 'By Postcode'
 
     payload = {
         "msg_type": FEISHU_CONFIG_POSTCODE['msg_type'],
@@ -633,7 +687,7 @@ for station in stations_special_request:
                 {"tag": "hr"},
                 {
                     "tag": "div",
-                    "text": {"tag": "lark_md", "content": "**By Postcode**"}
+                    "text": {"tag": "lark_md", "content": f"**{section_label}**"}
                 },
                 {
                     "tag": "div",
@@ -660,7 +714,7 @@ for station in stations_special_request:
     }
 
     updated_str = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    card_html = _build_card_html(dest_name, total_count, postcode_counts, pickup_time, platform, updated_str)
+    card_html = _build_card_html(dest_name, total_count, postcode_counts, pickup_time, platform, updated_str, section_label)
     card_html_path = os.path.join(script_dir, f"{today_str}_{dest_name}_card_preview.html")
     try:
         with open(card_html_path, 'w', encoding='utf-8') as f:

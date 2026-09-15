@@ -12,6 +12,13 @@ stations_special_request = [
         "pickup_time": "***",
         "platform": "***",
         # "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/188141ec-d65a-464d-be96-4b6d00343c49",
+    },
+    {
+        "id": 1329,
+        "name": "GAL",
+        "pickup_time": "***",
+        "platform": "Platform ***",
+        # "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/866f6dd5-a8aa-4454-bf99-207b11d382f9"
     }
 ]
 stations = [
@@ -96,6 +103,13 @@ FEISHU_CONFIG = {
 # ==================== 文件输出配置 ====================
 OUTPUT_CONFIG = {
     'sheet_name': '数据汇总'
+}
+
+# ==================== 邮编 -> 路线号 映射配置 ====================
+# 目前只有 ACT 有路线号映射表；其余邮编明细站点（如 GAL、MEK）继续展示原始邮编
+ROUTE_MAPPING_CONFIG = {
+    'file': 'data/ACT_postcode_mapping.xlsx',  # 相对项目根目录
+    'applies_to': ['ACT'],
 }
 
 # ==================== 系统配置 ====================
