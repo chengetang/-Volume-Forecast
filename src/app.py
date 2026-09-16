@@ -39,11 +39,13 @@ try:
         sys.path.insert(0, SCRIPT_DIR)
 
     global stations, stations_special_request, API_CONFIG, QUERY_CONFIG, HEADERS_CONFIG
-    global TOKEN_CONFIG, FEISHU_CONFIG, FEISHU_CONFIG_POSTCODE, SYSTEM_CONFIG, ROUTE_MAPPING_CONFIG
+    global TOKEN_CONFIG, FEISHU_CONFIG, FEISHU_CONFIG_POSTCODE, SYSTEM_CONFIG
+    global ROUTE_MAPPING_CONFIG, ROUTE_MAPPING_DATA
 
     from config_data import (
         stations, stations_special_request, API_CONFIG, QUERY_CONFIG, HEADERS_CONFIG,
-        TOKEN_CONFIG, FEISHU_CONFIG, FEISHU_CONFIG_POSTCODE, SYSTEM_CONFIG, ROUTE_MAPPING_CONFIG
+        TOKEN_CONFIG, FEISHU_CONFIG, FEISHU_CONFIG_POSTCODE, SYSTEM_CONFIG,
+        ROUTE_MAPPING_CONFIG, ROUTE_MAPPING_DATA
     )
     print("✅ 配置文件加载成功")
     print(f"📊 普通站点数量: {len(stations)}")
@@ -371,31 +373,23 @@ def route_box_sort_key(label):
         return (1, label)
 
 
-def load_route_mapping(relative_path):
-    """读取邮编 -> 路线号映射表（第一列=路线号 Scope，第二列=邮编 Postcode，带表头）。
+def load_route_mapping(mapping_rows):
+    """把 config_data.py 里的 ROUTE_MAPPING_DATA（(路线号, 邮编) 列表）转成 邮编 -> 路线号 的查找表。
+    数据直接写在 config_data.py 里，而不是从 data/*.xlsx 读取，是因为部分同事用 launcher.py
+    启动程序，它只会从 GitHub 拉取 config_data.py / app.py 这两个文件，不会拉取 data/ 目录，
+    放进 config_data.py 才能保证路线号映射也能跟着这两个文件一起分发到每个人的电脑上。
     同一个邮编可能对应多条路线（如相邻路线共管一个邮编），此时合并为 'A+B' 的形式展示。"""
-    project_root = os.path.dirname(SCRIPT_DIR)
-    mapping_path = os.path.join(project_root, relative_path)
-    if not os.path.exists(mapping_path):
-        print(f"⚠️ 未找到路线号映射表: {mapping_path}，相关站点将回退展示邮编")
-        return {}
-
-    df_mapping = pd.read_excel(mapping_path)
     postcode_to_routes = {}
-    for _, row in df_mapping.iterrows():
+    for route_label, postcode in mapping_rows:
         # 单元格里的路线号本身可能已经是 "29+32" 这种组合路线，先拆成单个路线号再收集，
         # 避免同一邮编出现在多行时把整段标签直接拼接，导致像 "55+60" + "60" 拼出重复的 "55+60+60"
-        route_tokens = [t.strip() for t in str(row.iloc[0]).split('+') if t.strip()]
-        try:
-            postcode = int(row.iloc[1])
-        except (ValueError, TypeError):
-            continue
-        postcode_to_routes.setdefault(postcode, set()).update(route_tokens)
+        route_tokens = [t.strip() for t in str(route_label).split('+') if t.strip()]
+        postcode_to_routes.setdefault(int(postcode), set()).update(route_tokens)
 
     return {pc: '+'.join(sorted(routes, key=int)) for pc, routes in postcode_to_routes.items()}
 
 
-ROUTE_MAPPING = load_route_mapping(ROUTE_MAPPING_CONFIG['file'])
+ROUTE_MAPPING = load_route_mapping(ROUTE_MAPPING_DATA)
 
 detail_records = []
 tracked_special_ids = {str(station['id']) for station in stations_special_request}
