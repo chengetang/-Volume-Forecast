@@ -310,19 +310,26 @@ stations = [
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/a4841ae0-5e7b-46fc-a8a5-357fe5c50630"
     },
     {
+        "id": 1513,
+        "name": "LUI",
+        "pickup_time": "***",
+        "platform": "***",
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/a4841ae0-5e7b-46fc-a8a5-357fe5c50630"
+    }
+    {
         "id": 879,
         "name": "MEK",
         "pickup_time": "4:00",
         "platform": "Platform 34",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/a4841ae0-5e7b-46fc-a8a5-357fe5c50630"
     },
-    {
-        "id": 1092,
-        "name": "ACT",
-        "pickup_time": "***",
-        "platform": "Platform ***",
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/a4841ae0-5e7b-46fc-a8a5-357fe5c50630"
-    },
+    # {
+    #     "id": 1092,
+    #     "name": "ACT",
+    #     "pickup_time": "***",
+    #     "platform": "Platform ***",
+    #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/a4841ae0-5e7b-46fc-a8a5-357fe5c50630"
+    # },
     {
         "id": 1329,
         "name": "GAL",
@@ -858,13 +865,13 @@ stations = [
 
 # 邮编级明细站点：走 selectPageList + detail 两步法，卡片按 postCode 聚合展示
 stations_special_request = [
-    {
-        "id": 1092,
-        "name": "ACT",
-        "pickup_time": "***",
-        "platform": "Platform ***",
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/8794cb6b-5734-420e-8684-c0eb9749f598"
-    },
+    # {
+    #     "id": 1092,
+    #     "name": "ACT",
+    #     "pickup_time": "***",
+    #     "platform": "Platform ***",
+    #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/8794cb6b-5734-420e-8684-c0eb9749f598"
+    # },
     {
         "id": 1329,
         "name": "GAL",
@@ -878,6 +885,13 @@ stations_special_request = [
         "pickup_time": "4:00",
         "platform": "Platform 34",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/1be920d5-3e51-4495-a6ee-46e0cafd8c94"
+    },
+    {
+        "id": 1513,
+        "name": "LUI",
+        "pickup_time": "***",
+        "platform": "***",
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/11ac9806-82b1-489a-8010-a0ccde43d3bf"
     }
 ]
 
@@ -951,7 +965,7 @@ FEISHU_CONFIG_POSTCODE = {
 }
 
 # ==================== 邮编 -> 路线号 映射配置 ====================
-# 目前只有 ACT 有路线号映射表；其余邮编明细站点（如 GAL、MEK）继续展示原始邮编
+# ACT 的邮编已改属其他 DSP，不再适用该映射表；applies_to 留空，所有邮编明细站点均展示原始邮编
 
 ROUTE_MAPPING_DATA = [
     ('1', 3731),
@@ -1016,7 +1030,7 @@ ROUTE_MAPPING_DATA = [
 ]
 
 ROUTE_MAPPING_CONFIG = {
-    'applies_to': ['ACT'],
+    'applies_to': [],
 }
 
 # ==================== 系统配置 ====================
