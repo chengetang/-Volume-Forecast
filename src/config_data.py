@@ -315,7 +315,7 @@ stations = [
         "pickup_time": "***",
         "platform": "***",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/a4841ae0-5e7b-46fc-a8a5-357fe5c50630"
-    }
+    },
     {
         "id": 879,
         "name": "MEK",
