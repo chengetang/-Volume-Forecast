@@ -860,6 +860,13 @@ stations = [
         "pickup_time": "***",
         "platform": "***",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/c015e971-a285-49bd-9648-e3c721e264bf"
+    },
+    {  
+        "id": 1510,
+        "name": "SYO",
+        "pickup_time": "***",
+        "platform": "***",
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/02d575a1-87b0-4e54-aca3-f48890383ec2"
     }
 ]
 
