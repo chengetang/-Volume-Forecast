@@ -330,13 +330,13 @@ stations = [
     #     "platform": "Platform ***",
     #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/a4841ae0-5e7b-46fc-a8a5-357fe5c50630"
     # },
-    {
-        "id": 1329,
-        "name": "GAL",
-        "pickup_time": "***",
-        "platform": "Platform ***",
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/a4841ae0-5e7b-46fc-a8a5-357fe5c50630"
-    },
+    # {
+    #     "id": 1329,
+    #     "name": "GAL",
+    #     "pickup_time": "***",
+    #     "platform": "Platform ***",
+    #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/a4841ae0-5e7b-46fc-a8a5-357fe5c50630"
+    # },
     # {
     #     "id": 1340,
     #     "name": "BTY",
@@ -879,13 +879,13 @@ stations_special_request = [
     #     "platform": "Platform ***",
     #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/8794cb6b-5734-420e-8684-c0eb9749f598"
     # },
-    {
-        "id": 1329,
-        "name": "GAL",
-        "pickup_time": "***",
-        "platform": "Platform ***",
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/866f6dd5-a8aa-4454-bf99-207b11d382f9"
-    },
+    # {
+    #     "id": 1329,
+    #     "name": "GAL",
+    #     "pickup_time": "***",
+    #     "platform": "Platform ***",
+    #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/866f6dd5-a8aa-4454-bf99-207b11d382f9"
+    # },
     {
         "id": 879,
         "name": "MEK",
