@@ -867,6 +867,20 @@ stations = [
         "pickup_time": "***",
         "platform": "***",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/02d575a1-87b0-4e54-aca3-f48890383ec2"
+    },
+    {  
+        "id": 1502,
+        "name": "ZAN",
+        "pickup_time": "***",
+        "platform": "***",
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/a7e996e8-4903-48dc-8566-aeec5e6cb1b3"
+    },
+    {  
+        "id": 1503,
+        "name": "S86",
+        "pickup_time": "***",
+        "platform": "***",
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/8462da15-9d95-4181-b9ae-3011f7c9f39a"
     }
 ]
 
