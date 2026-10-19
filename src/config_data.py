@@ -310,8 +310,8 @@ stations = [
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/a4841ae0-5e7b-46fc-a8a5-357fe5c50630"
     },
     {
-        "id": 1513,
-        "name": "LUI",
+        "id": 1514,
+        "name": "HTS",
         "pickup_time": "***",
         "platform": "***",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/a4841ae0-5e7b-46fc-a8a5-357fe5c50630"
@@ -907,12 +907,19 @@ stations_special_request = [
         "platform": "Platform 34",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/1be920d5-3e51-4495-a6ee-46e0cafd8c94"
     },
-    {
-        "id": 1513,
-        "name": "LUI",
+    # {
+    #     "id": 1513,
+    #     "name": "LUI",
+    #     "pickup_time": "***",
+    #     "platform": "***",
+    #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/11ac9806-82b1-489a-8010-a0ccde43d3bf"
+    # },
+    {  
+        "id": 1514,
+        "name": "HTS",
         "pickup_time": "***",
         "platform": "***",
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/11ac9806-82b1-489a-8010-a0ccde43d3bf"
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/ff12962b-4ce3-45bf-8800-b6c833c645bc"
     }
 ]
 
