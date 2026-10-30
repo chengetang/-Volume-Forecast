@@ -881,6 +881,13 @@ stations = [
         "pickup_time": "***",
         "platform": "***",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/8462da15-9d95-4181-b9ae-3011f7c9f39a"
+    },
+    {  
+        "id": 1515,
+        "name": "LN5",
+        "pickup_time": "***",
+        "platform": "***",
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/01da9339-4b49-4c94-a081-102313e59239"
     }
 ]
 
