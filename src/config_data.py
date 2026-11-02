@@ -309,9 +309,16 @@ stations = [
         "platform": "Platform 85",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/a4841ae0-5e7b-46fc-a8a5-357fe5c50630"
     },
-    {
-        "id": 1514,
-        "name": "HTS",
+    # {
+    #     "id": 1514,
+    #     "name": "HTS",
+    #     "pickup_time": "***",
+    #     "platform": "***",
+    #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/a4841ae0-5e7b-46fc-a8a5-357fe5c50630"
+    # },
+    {  
+        "id": 1516,
+        "name": "BNL",
         "pickup_time": "***",
         "platform": "***",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/a4841ae0-5e7b-46fc-a8a5-357fe5c50630"
@@ -372,34 +379,34 @@ stations = [
     #     "platform": "Platform 26",
     #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/d3cde48e-7720-4fec-b65e-8eba33e0dbae"
     # },
-    {
-        "id": 1346,
-        "name": "BMB",
-        "pickup_time": "3:00",
-        "platform": "Platform 89",
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/51abaae6-88c7-4fc5-bddc-92c5c010344a"
-    },
-    {
-        "id": 1493,
-        "name": "BMB1",
-        "pickup_time": "3:00",
-        "platform": "Platform 83",
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/51abaae6-88c7-4fc5-bddc-92c5c010344a"
-    },
-    {
-        "id": 1494,
-        "name": "BMB2",
-        "pickup_time": "3:00",
-        "platform": "Platform 83",
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/51abaae6-88c7-4fc5-bddc-92c5c010344a"
-    },
-    {
-        "id": 1495,
-        "name": "BMB3",
-        "pickup_time": "3:00",
-        "platform": "Platform 83",
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/51abaae6-88c7-4fc5-bddc-92c5c010344a"
-    },
+    # {
+    #     "id": 1346,
+    #     "name": "BMB",
+    #     "pickup_time": "3:00",
+    #     "platform": "Platform 89",
+    #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/51abaae6-88c7-4fc5-bddc-92c5c010344a"
+    # },
+    # {
+    #     "id": 1493,
+    #     "name": "BMB1",
+    #     "pickup_time": "3:00",
+    #     "platform": "Platform 83",
+    #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/51abaae6-88c7-4fc5-bddc-92c5c010344a"
+    # },
+    # {
+    #     "id": 1494,
+    #     "name": "BMB2",
+    #     "pickup_time": "3:00",
+    #     "platform": "Platform 83",
+    #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/51abaae6-88c7-4fc5-bddc-92c5c010344a"
+    # },
+    # {
+    #     "id": 1495,
+    #     "name": "BMB3",
+    #     "pickup_time": "3:00",
+    #     "platform": "Platform 83",
+    #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/51abaae6-88c7-4fc5-bddc-92c5c010344a"
+    # },
     {
         "id": 1350,
         "name": "YKY",
@@ -587,13 +594,13 @@ stations = [
         "platform": "Platform ***",
         "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/827b5779-5607-4f0d-aee2-67d9e92b0d33"
     },
-    {
-        "id": 1376,
-        "name": "BMW",
-        "pickup_time": "3:00",
-        "platform": "Platform 34",
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/47e0010c-e016-4c61-9cc5-66919a2649de"
-    },
+    # {
+    #     "id": 1376,
+    #     "name": "BMW",
+    #     "pickup_time": "3:00",
+    #     "platform": "Platform 34",
+    #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/47e0010c-e016-4c61-9cc5-66919a2649de"
+    # },
     {
         "id": 1377,
         "name": "TOP",
@@ -921,12 +928,19 @@ stations_special_request = [
     #     "platform": "***",
     #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/11ac9806-82b1-489a-8010-a0ccde43d3bf"
     # },
+    # {  
+    #     "id": 1514,
+    #     "name": "HTS",
+    #     "pickup_time": "***",
+    #     "platform": "***",
+    #     "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/ff12962b-4ce3-45bf-8800-b6c833c645bc"
+    # },
     {  
-        "id": 1514,
-        "name": "HTS",
+        "id": 1516,
+        "name": "BNL",
         "pickup_time": "***",
         "platform": "***",
-        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/ff12962b-4ce3-45bf-8800-b6c833c645bc"
+        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/7e70229a-0d61-4aaf-a4ec-6a5f10830a63"
     }
 ]
 
